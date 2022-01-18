@@ -20,7 +20,20 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
+
+  // asyncData(context, callback) {
+  //   return axios.get('https://blogs-45a6e-default-rtdb.firebaseio.com/posts/' + context.params.id + '.json' )
+  //     .then( res => {
+  //       return {
+  //         loadedPost: res.data
+  //       }
+  //     })
+  //     .catch(e => context.error(e))
+  // },
+  
   // asyncData(context, callback) {
   //   setTimeout(() => {
   //     callback(new Error(), {
@@ -50,6 +63,16 @@ export default {
       }
     };
   },
+
+  // data() {
+  //   return {
+  //     loadedPost: {}
+  //   }
+  // },
+  // async fetch() {
+
+  // }
+
   // async fetch() {
   //   this.loadedPost = {
   //     id: '1',
