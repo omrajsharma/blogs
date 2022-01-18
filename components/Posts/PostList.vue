@@ -2,7 +2,7 @@
     <section class="posts-list">
 
       <post-preview 
-        v-for="post in posts"
+        v-for="post in loadedPosts"
         :key="post.id"
         :id="post.id"
         :is-admin="isAdmin"
@@ -33,10 +33,11 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false
-    },
-    posts: {
-      type: Array,
-      required: true
+    }
+  },
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
     }
   }
 }
